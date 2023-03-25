@@ -1,5 +1,5 @@
 package trimmer;
-public class Trim {
+public class Trim{
     private final double startTime;
     private final double endTime;
     
