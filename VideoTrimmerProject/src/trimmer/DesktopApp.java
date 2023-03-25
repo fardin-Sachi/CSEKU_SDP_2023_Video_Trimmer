@@ -68,6 +68,7 @@ public class DesktopApp extends Application {
 //            MediaView mediaView = new MediaView(player);
 //            grid.add(mediaView,0,0);
         });
+        fileButton.setFocusTraversable(false);
         grid.add(fileButton,2,0);
         
         Label startLabel = new Label("Start time (seconds):");
@@ -91,6 +92,7 @@ public class DesktopApp extends Application {
             startField.clear();
             endField.clear();
         });
+        addTrimButton.setFocusTraversable(false);
 //        System.out.println("Check under Add Trime");
         grid.add(addTrimButton,2,1);
 
@@ -103,6 +105,7 @@ public class DesktopApp extends Application {
             }
 //            else System.out.println("Check File not exist");
         });
+        trimButton.setFocusTraversable(false);
 //        System.out.println("Check under Trim Video");
 
         HBox hbBtn = new HBox(10);
@@ -130,12 +133,11 @@ public class DesktopApp extends Application {
         writer.open(outputFilePath, VideoWriter.fourcc('H','2','6','4'),fps,new Size((int)capture.get(Videoio.CAP_PROP_FRAME_WIDTH), (int)capture.get(Videoio.CAP_PROP_FRAME_HEIGHT)),true);
 
         //Iterating over each trim section and write the frames to the output video file
-        for (Trim trim : trims) {
+        for(Trim trim : trims) {
             int startFrameIndex = (int) Math.round(trim.getStartTime() * fps);
             int endFrameIndex = (int) Math.round(trim.getEndTime() * fps);
-
             //Reading and writing each frame within the trim section
-            for (int i = startFrameIndex; i<endFrameIndex; i++) {
+            for(int i=startFrameIndex; i<endFrameIndex; i++) {
                 Mat frame = new Mat();
                 capture.read(frame);
                 writer.write(frame);
