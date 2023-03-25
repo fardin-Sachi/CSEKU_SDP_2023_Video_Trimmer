@@ -114,6 +114,7 @@ public class DesktopApp extends Application {
         grid.add(hbBtn,2,2);
 
         Scene scene = new Scene(grid,500,200);
+        primaryStage.setResizable(false);        
         primaryStage.setScene(scene);
         primaryStage.show();
 //        System.out.println("Check last");
