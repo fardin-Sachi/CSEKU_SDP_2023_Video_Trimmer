@@ -146,6 +146,7 @@ public class DesktopApp extends Application {
         }
         capture.release();
         writer.release();
+        System.out.println("Trimming Completed");
     }
     public static void main(String[] args){
         launch(args);
