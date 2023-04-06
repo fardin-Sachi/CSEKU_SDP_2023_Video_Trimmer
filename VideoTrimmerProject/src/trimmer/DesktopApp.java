@@ -148,7 +148,7 @@ public class DesktopApp extends Application {
         writer.release();
         System.out.println("Trimming Completed");
     }
-    public static void main(String[] args) {
-        launch(args);
-    }
+//    public static void main(String[] args) {
+//        launch(args);
+//    }
 }

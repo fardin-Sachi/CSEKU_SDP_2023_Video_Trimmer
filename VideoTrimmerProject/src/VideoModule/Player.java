@@ -213,7 +213,7 @@ public class Player extends Application{
         System.out.println("Trimming Completed");
     }
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+//    public static void main(String[] args) {
+//        launch(args);
+//    }
 }
