@@ -1,5 +1,6 @@
 package ModuledTrimmer;
 
+import Codebase.Interface;
 import javafx.application.Application;
 
 public class AppLauncher{
