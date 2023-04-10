@@ -1,2 +1,2 @@
 # VideoTrimmer
-This application can do multiple trimming out of single .mp4 video file.
+This application can do multiple trimming out of a single .mp4 and .avi video file.
